@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #C773EB 30%, #E89D5B 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -23,13 +23,18 @@ const Header = () => {
   return (
     <AppBar className={classes.root} position="sticky">
       <Toolbar>
-        <Grid container>
-          <Grid item xs={6}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="center"
+        >
+          <Grid item>
             <Link to='/'>
               Logo
             </Link>
           </Grid>
-          <Grid item xs={6} justifyContent='center'>
+          <Grid item justifyContent='center'>
             <Breadcrumbs aria-label="breadcrumb">
 
               <Link to="/Apps">
